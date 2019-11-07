@@ -3,6 +3,7 @@ from datetime import datetime
 
 
 class Realtor(models.Model):
+    """Creating the realtor table with its corresponding fields."""
     name = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
     description = models.TextField(blank=True)

@@ -4,6 +4,7 @@ from realtors.models import Realtor
 
 
 class Listing(models.Model):
+    """Creating the Listing table with its corresponding fields."""
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
@@ -27,5 +28,6 @@ class Listing(models.Model):
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
 
+    # Showing the title in the admin.
     def __str__(self):
         return self.title
