@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import Listing
 from .choices import price_choices, state_choices, bedroom_choices
+from django.contrib import messages, auth
 
 
 def index(request):
